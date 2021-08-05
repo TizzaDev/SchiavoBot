@@ -1,7 +1,6 @@
 import discord
 import re
-
-TOKEN = 'MjgxNzk4MjQzMTY2MTkxNjE2.WKW7EA.GlQmVmcKTUSbJY6CPk5815wr-i0'
+import os
 
 client = discord.Client()
 
@@ -25,4 +24,4 @@ async def on_message(message):
                     response += f':regional_indicator_{char}:'
             await message.channel.send(response)
 
-client.run(TOKEN)
+client.run(os.environ['token'])
